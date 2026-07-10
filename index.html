@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pequeño detalle</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="console" class="console"></div>
+
+  <main class="stage">
+    <section class="center">
+      <div class="intro">
+        <div class="heart-large">❤️</div>
+        <h1 class="greeting">Hola, hermosa.</h1>
+        <button id="openBtn" class="btn">Abrir</button>
+        <div class="btn-group">
+          <button id="musicPlayBtn" class="btn btn-small">Reproducir música</button>
+          <button id="musicPauseBtn" class="btn btn-small">Pausar música</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <audio id="bgMusic" loop preload="auto">
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+  <div id="overlay" class="overlay hidden">
+    <div class="card">
+      <div id="content" class="content"></div>
+
+      <div class="photo-inline-block">
+        <button id="insidePhotoBtn" class="photo-button photo-button-inline" type="button">
+          <img src="photo.jpeg" alt="Nuestra foto" class="photo-card photo-card-inline">
+          <span class="photo-caption">Mi persona favorita, Mi flaca, Mi todo 💖</span>
+        </button>
+      </div>
+
+      <div class="final-block">
+        <div class="heart-hint">Tócame</div>
+        <div id="finalHeart" class="final-heart">❤️</div>
+        <div id="finalText" class="final-text"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="secondOverlay" class="overlay overlay-secondary hidden">
+    <div class="card card-secondary">
+      <button id="backSecondOverlay" class="back-btn" type="button">← Volver</button>
+      <button id="closeSecondOverlay" class="close-btn" type="button" aria-label="Cerrar">×</button>
+      <div id="secondContent" class="content"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
