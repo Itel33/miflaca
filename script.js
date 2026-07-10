@@ -102,10 +102,20 @@ setInterval(spawnParticle, isMobile ? 1000 : 600);
 // --- texto largo que aparece al abrir ---
 const longText = `Hoy es 11.
 
-Sé que este mes y este 11 no es como lo imaginábamos,
-y tampoco hice esto para cambiar lo que sentís.
+Sé que este 11 no es como lo imaginábamos ni como lo esperábamos. 
+Tal vez los planes cambiaron y las cosas no salieron como alguna vez soñamos,
+pero eso no cambia lo importante que es este día para mí.
 
-Simplemente me nació dedicarte un ratito
+Aun así, quería que supieras que pienso en vos y que deseo de corazón que, a pesar de todo,
+encuentres momentos para sonreír. Estas fechas nos va a recordar lo que esperábamos vivir,
+pero también nos enseña a valorar lo que todavía tenemos y lo que sentimos.
+
+Ojalá el próximo 11 nos encuentre de la manera en que tanto imaginamos. Mientras tanto, 
+solo quería dejarte esta pequeña nota para decirte que este día sigue siendo especial y que deseo que,
+de alguna forma, tengas un lindo momento.
+
+
+Simplemente quiero dedicarte un ratito
 de lo que más me gusta hacer.
 
 Porque cada línea de esta página
