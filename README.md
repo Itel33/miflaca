@@ -1,4 +1,4 @@
-Pequeño detalle — página estática
+Nuestro día — página estática
 
 Abrir `index.html` en un navegador moderno (doble clic o mediante Live Server).
 

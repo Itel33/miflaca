@@ -44,8 +44,8 @@ body{
 .close-btn{position:absolute;top:12px;right:12px;border:none;background:rgba(255,255,255,0.16);color:#fff;border-radius:999px;width:34px;height:34px;font-size:20px;cursor:pointer}
 .close-btn:hover{background:rgba(255,255,255,0.24)}
 .content{font-size:18px;white-space:pre-wrap;color:var(--text);min-height:240px;line-height:1.6}
-.final-block{display:flex;flex-direction:column;align-items:center;margin-top:20px}
-.heart-hint{font-size:13px;color:#ffd9e4;margin-bottom:8px;opacity:0.9;animation:heartbeatHint 1.4s ease-in-out infinite}
+.final-block{display:flex;flex-direction:column;align-items:center;margin-top:14px;gap:6px}
+.heart-hint{font-size:18px;color:#ffd9e4;margin:0;opacity:0.95;letter-spacing:0.04em;animation:heartbeatHint 1.4s ease-in-out infinite}
 .final-heart{font-size:48px;cursor:pointer;transition:transform .12s ease, filter .2s ease;filter:drop-shadow(0 0 0 rgba(255,255,255,0));}
 .final-heart:hover{transform:scale(1.08);filter:drop-shadow(0 0 12px rgba(255,159,177,0.55))}
 .final-heart:active{transform:scale(.94)}
@@ -55,6 +55,22 @@ body{
 .heart-message-heart{font-size:28px;margin-bottom:6px}
 .heart-message-card p{margin:0 0 4px;font-weight:700;color:#fff}
 .heart-message-card span{font-size:14px;color:#ffe9ef}
+.invite-box{display:flex;justify-content:center;margin-top:22px}
+.invite-envelope{position:relative;width:min(100%,320px);background:rgba(255,255,255,0.13);border:1px solid rgba(255,255,255,0.18);border-radius:20px;padding:18px 16px;box-shadow:0 18px 40px rgba(0,0,0,0.18);overflow:hidden;backdrop-filter:blur(6px);display:flex;flex-direction:column;align-items:center;gap:10px;color:#fff;text-align:center;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease}
+.invite-envelope:hover{transform:translateY(-2px);box-shadow:0 20px 45px rgba(0,0,0,0.28)}
+.invite-envelope:active{transform:translateY(0)}
+.invite-envelope::after{content:'';position:absolute;top:0;left:0;width:100%;height:50%;background:linear-gradient(135deg,rgba(255,255,255,0.35),rgba(255,255,255,0));clip-path:polygon(0 0,100% 0,50% 70%);pointer-events:none}
+.ticket-strip{display:flex;justify-content:center;gap:12px;font-size:22px;margin-bottom:8px;position:relative;z-index:1}
+.invite-title{margin:0;font-size:18px;font-weight:700;color:#fff;text-align:center;line-height:1.4;position:relative;z-index:1}
+.invite-envelope.active{background:rgba(255,255,255,0.22);border-color:rgba(255,255,255,0.28)}
+.invite-overlay .card{max-width:380px;padding:28px 24px}
+.invite-card{position:relative;display:flex;flex-direction:column;align-items:center;gap:12px}
+.invite-content{font-size:20px;line-height:1.6;color:#fff;text-align:center;white-space:normal}
+.btn-wpp{background:#25d366;color:#fff;border:none;padding:12px 20px;border-radius:999px;font-weight:700;cursor:pointer;text-decoration:none;transition:transform .18s ease,box-shadow .18s ease;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.btn-wpp:hover{transform:translateY(-2px);box-shadow:0 12px 24px rgba(0,0,0,0.18)}
+.btn-wpp:active{transform:translateY(0)}
+.invite-overlay{z-index:3000;background:rgba(3,4,10,0.72)}
+.invite-overlay .close-btn{right:14px;top:14px}
 @keyframes heartbeatHint{0%,100%{transform:scale(1);opacity:0.8}50%{transform:scale(1.05);opacity:1}}
 @keyframes messagePop{0%{opacity:0;transform:scale(.95)}100%{opacity:1;transform:scale(1)}}
 /* floating hearts */

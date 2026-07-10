@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Pequeño detalle</title>
+  <title>Nuestro día</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -37,7 +37,7 @@
       </div>
 
       <div class="final-block">
-        <div class="heart-hint">Tócame</div>
+        <div class="heart-hint">Toca mi corazón</div>
         <div id="finalHeart" class="final-heart">❤️</div>
         <div id="finalText" class="final-text"></div>
       </div>
@@ -49,6 +49,20 @@
       <button id="backSecondOverlay" class="back-btn" type="button">← Volver</button>
       <button id="closeSecondOverlay" class="close-btn" type="button" aria-label="Cerrar">×</button>
       <div id="secondContent" class="content"></div>
+      <div id="inviteBox" class="invite-box hidden" aria-hidden="true">
+        <button id="inviteBtn" class="invite-envelope" type="button" aria-expanded="false">
+          <div class="ticket-strip">🎟️🎟️</div>
+          <span class="invite-title">Toca para ver la invitación</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="inviteOverlay" class="overlay invite-overlay hidden" aria-hidden="true">
+    <div class="card card-secondary invite-card">
+      <button id="closeInviteOverlay" class="close-btn" type="button" aria-label="Cerrar">×</button>
+      <div class="content invite-content">Me aceptarias ir al cine la próxima semana? 💌</div>
+      <a href="https://wa.me/543516420165?text=Hola%20%F0%9F%8E%AE%20Quiero%20contestar%20tu%20invitaci%C3%B3n%20al%20cine.%20%C2%BFS%C3%AD%3F" target="_blank" rel="noopener noreferrer" class="btn btn-wpp">Responder por WhatsApp</a>
     </div>
   </div>
 

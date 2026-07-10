@@ -8,6 +8,10 @@ const finalHeart = document.getElementById('finalHeart');
 const finalText = document.getElementById('finalText');
 const secondOverlay = document.getElementById('secondOverlay');
 const secondContent = document.getElementById('secondContent');
+const inviteBox = document.getElementById('inviteBox');
+const inviteBtn = document.getElementById('inviteBtn');
+const inviteOverlay = document.getElementById('inviteOverlay');
+const closeInviteOverlayBtn = document.getElementById('closeInviteOverlay');
 const backSecondOverlayBtn = document.getElementById('backSecondOverlay');
 const closeSecondOverlayBtn = document.getElementById('closeSecondOverlay');
 const heartMessage = document.getElementById('heartMessage');
@@ -207,6 +211,9 @@ function openSecondOverlay(){
   secondOverlay.animate([{opacity:0},{opacity:1}],{duration:320,fill:'forwards',easing:'ease'});
   secondContent.innerHTML = '';
   secondContent.style.display = 'block';
+  resetInvite();
+  hideInvite();
+  hideInviteOverlay();
   const secondText = `Te extraño todos los días, todas las noches.
 Te sueño, extraño todo de vos.
 Todo porque sos mi todo.
@@ -221,7 +228,7 @@ o de intentarlo otra vez.
 Te amo mucho, muchísimo, montonazo.
 Gracias Flaca. ❤️`;
   setTimeout(()=>{
-    typeText(secondContent, secondText);
+    typeText(secondContent, secondText, showInvite);
   }, 30);
 }
 
@@ -241,6 +248,38 @@ function closeSecondOverlay(){
   contentEl.innerHTML = longText.replace(/\n/g, '<br>');
 }
 
+function hideInvite(){
+  if (!inviteBox) return;
+  inviteBox.classList.add('hidden');
+}
+
+function showInvite(){
+  if (!inviteBox) return;
+  inviteBox.classList.remove('hidden');
+}
+
+function resetInvite(){
+  if (!inviteBtn) return;
+  inviteBtn.setAttribute('aria-expanded', 'false');
+  inviteBtn.classList.remove('active');
+}
+
+function revealInvite(){
+  if (!inviteOverlay || !inviteBtn) return;
+  inviteOverlay.classList.remove('hidden');
+  inviteOverlay.style.display = 'flex';
+  inviteOverlay.style.opacity = 0;
+  inviteOverlay.animate([{opacity:0},{opacity:1}],{duration:260,fill:'forwards',easing:'ease'});
+  inviteBtn.setAttribute('aria-expanded', 'true');
+  inviteBtn.classList.add('active');
+}
+
+function hideInviteOverlay(){
+  if (!inviteOverlay) return;
+  inviteOverlay.classList.add('hidden');
+  inviteOverlay.style.display = 'none';
+}
+
 // abrir detalle
 openBtn.addEventListener('click', openDetail);
 photoBtn?.addEventListener('click', openDetail);
@@ -257,6 +296,19 @@ backSecondOverlayBtn?.addEventListener('click', closeSecondOverlay);
 closeSecondOverlayBtn?.addEventListener('click', closeSecondOverlay);
 secondOverlay?.addEventListener('click', e => {
   if (e.target === secondOverlay) closeSecondOverlay();
+});
+
+inviteBtn?.addEventListener('click', revealInvite);
+inviteBtn?.addEventListener('keydown', e => {
+  if (e.key === 'Enter' || e.key === ' ') {
+    e.preventDefault();
+    revealInvite();
+  }
+});
+
+closeInviteOverlayBtn?.addEventListener('click', hideInviteOverlay);
+inviteOverlay?.addEventListener('click', e => {
+  if (e.target === inviteOverlay) hideInviteOverlay();
 });
 
 musicPlayBtn?.addEventListener('click', playMusic);
